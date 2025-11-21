@@ -1,11 +1,14 @@
 import sqlite3
 import streamlit as st
+import io
 
 from datetime import datetime
 
 import requests
 import os
 from pathlib import Path
+import soundfile as sf
+#from pydub import AudioSegment
 
 #DATA_DIR = Path(os.getenv("DATA_DIR", "data"))
 #DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -125,6 +128,16 @@ def get_weather_vienna():
 
 
 def main():
+    
+    #if 'key' not in st.session_state:
+     #   st.session_state['key'] = 'value'
+
+    #read the area 
+    area = st.query_params.get("area")
+
+    print("url", area)
+
+    #area = st.query_params
     init_table()
 
     st.title("Noise Perception Questionnaire")
@@ -191,11 +204,8 @@ def main():
 
     #with st.expander("📝 Noise Perception Questions"):
     with st.form("soundscape_form"):
-        area = st.radio(
-            "On the QR code there is the area tag, this corresponds to your current location. Since we are not collecting GPS informations, can you specify in which area are you? ",
-            ["A","B","C","D","E","F"],
-            index= None
-        )
+        
+
         st.caption("To what extend do you presently hear the following four types of sounds?")
         
         # Question 1: Traffic noise
@@ -268,7 +278,7 @@ def main():
         )
         st.divider()
 
-        audio_value = st.audio_input("Please record 60 seconds of audio with your device", sample_rate=48000)
+        audio_value = st.audio_input("Please record 30 seconds of audio with your device", sample_rate=48000)
 
         
 
@@ -279,8 +289,10 @@ def main():
 
 
     if submitted: #add the only single submission
+        #area = "luca"
+        #st.markdown(f"[share]({area})")
 
-        
+        #print("get url", area)
 
         st.write(f"**Sky:** {desc}")
         st.json(w)  # simply prints it
@@ -328,16 +340,20 @@ def main():
 
         audio_name = "noaudio"
         if audio_value:
+            audiodata, samplerate = sf.read(io.BytesIO(audio_value.getbuffer()))
             st.audio(audio_value)
             current_datetime = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
             str_current_datetime = str(current_datetime)
-            audio_name = str_current_datetime+".wav"
+            audio_name = str_current_datetime+".ogg"
 
             #audio_path = AUDIO_DIR / audio_name
-            with open(audio_name, "wb") as f:
-                f.write(audio_value.getbuffer())
-                st.write("Audio recorded and saved successfully! ", audio_name)
-                f.close()
+            sf.write(audio_name, audiodata, samplerate,format='ogg', subtype='vorbis')
+            
+            st.write("Audio recorded and saved successfully! ", audio_name)
+            #with open(audio_name, "wb") as f:
+                #f.write(audio_value.getbuffer())
+                #st.write("Audio recorded and saved successfully! ", audio_name)
+                #f.close()
 
         write_table(
             traffic_noise, other_noise, human_noise, natural_sounds,
