@@ -8,6 +8,7 @@ import requests
 import os
 from pathlib import Path
 import soundfile as sf
+import shutil
 #from pydub import AudioSegment
 
 #DATA_DIR = Path(os.getenv("DATA_DIR", "data"))
@@ -122,6 +123,18 @@ def get_weather_vienna():
             "gust_kmh": cur["wind_gusts_10m"],
             "wind_dir_deg": cur["wind_direction_10m"],
         }
+
+def database_backup(): 
+    BACKUP_DIR = os.getenv("BACKUP_DIR", "/backup")
+
+    backup_path = os.path.join(BACKUP_DIR, "backup_database_survey.db")
+    conn = sqlite3.connect("soundscape_answer.db")
+    #position = "/Users/lorenzo/codes/soundscape_data/backup_db"
+    backup_conn = sqlite3.connect(backup_path)
+    conn.backup(backup_conn)
+
+    backup_conn.close()
+    conn.close()
 
   
 
@@ -348,7 +361,13 @@ def main():
 
             #audio_path = AUDIO_DIR / audio_name
             sf.write(audio_name, audiodata, samplerate,format='ogg', subtype='vorbis')
-            
+            #backup audio file
+
+            BACKUP_DIR = os.getenv("BACKUP_DIR", "/backup")
+
+            backup_name = os.path.join(BACKUP_DIR, audio_name)
+            #backup_name = "/Users/lorenzo/codes/soundscape_data/" + audio_name
+            shutil.copy(audio_name, backup_name )
             st.write("Audio recorded and saved successfully! ", audio_name)
             #with open(audio_name, "wb") as f:
                 #f.write(audio_value.getbuffer())
@@ -363,6 +382,8 @@ def main():
             audio_name, comments, wereyouwearing, usuallywear,
             orario,  precip_mm, temp_c, wcode,
             wind_kmh, gust_kmh, wind_dir_deg, contacts, area)
+        
+        database_backup()
 
             
     
