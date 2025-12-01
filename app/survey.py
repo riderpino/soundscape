@@ -15,6 +15,8 @@ import languages as lg
 
 
 def main():
+
+   
     #supported_languages = ["en", "nl", "it"]
     #lang = request.accept_languages.best_match(supported_languages)
     language = st.selectbox("Choose your language:",("English", "Italiano", "Deutsch", "Français"),)
@@ -30,6 +32,7 @@ def main():
         lang = "fr"
 
     #st.write(lang)
+    
     
 
     
@@ -143,7 +146,7 @@ def main():
         #st.caption("overall, how would you describe the present enviroment?.")
         wereyouwearing = st.radio(
             lg.languages["text"]["question_descriptions"]["q_were_you_wearing_headphones"][lang],
-            ["Yes", "No"], index=None
+            lg.languages["text"]["groups_of_scales"]["yes_no"][lang], index=None
         )
         st.divider()
 
