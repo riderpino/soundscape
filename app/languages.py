@@ -46,35 +46,16 @@ languages = {
                 "de": "Contact informations",
                 "fr": "Contact informations",
             },
-            "label_sky": {
-                "en": "Sky:",
-                "it": "il cielo oggi è: ",
-                "de": "Sky:",
-                "fr": "Sky:",
-            },
+            
         },
 
-        # ======================
-        # DESCRIPTIONS & MESSAGES
-        # ======================
+        # Messages in and varios descriptions
         "descriptions": {
             "study_description": {
                 "en": "This study aims to understand the soundscape around us. I ask you to answer the survey based on your personal perception of the sound around you in this moment",
                 "it": "Questo studio si impegna nella creazione di un applicativo per l’analisi del panorma sonoro. Ti chiedo ti rispondere al questionario basandoti sulla tua personale percezione del suono intorno a te in questo momento e in questo luogo",
                 "de": "This study aims to understand the soundscape around us. I ask you to answer the survey based on your personal perception of the sound around you in this moment",
                 "fr": "This study aims to understand the soundscape around us. I ask you to answer the survey based on your personal perception of the sound around you in this moment",
-            },
-            "feedback_thanks": {
-                "en": "Thanks! Your responses have been recorded (not persisted here by default).",
-                "it": "Grazie! abbiamo registrato la tua risposta",
-                "de": "Thanks! Your responses have been recorded (not persisted here by default).",
-                "fr": "Thanks! Your responses have been recorded (not persisted here by default).",
-            },
-            "feedback_audio_saved": {
-                "en": "Audio recorded and saved successfully!",
-                "it": "La registrazione audoo è stata salvata con successo",
-                "de": "Audio recorded and saved successfully!",
-                "fr": "Audio recorded and saved successfully!",
             },
             
             
@@ -162,56 +143,61 @@ languages = {
                 "de": "If you are interested about the future of this project leave us a contact",
                 "fr": "If you are interested about the future of this project leave us a contact",
             },
-            # Slider labels
+
+
+            # iso q9 metrics, transaltion : 
+            #de
+            #it
+            #fr
             "scale_label_pleasant": {
-                "en": "pleasant?",
-                "it": "pleasant?",
-                "de": "pleasant?",
-                "fr": "pleasant?",
+                "en": "Pleasant?",
+                "it": "Piacevole?",
+                "de": "Angenehm?",
+                "fr": "Agréable?",
             },
             "scale_label_chaotic": {
-                "en": "chaotic?",
-                "it": "chaotic?",
-                "de": "chaotic?",
-                "fr": "chaotic?",
+                "en": "Chaotic?",
+                "it": "Caotico?",
+                "de": "Chaotisch?",
+                "fr": "Agité?",
             },
             "scale_label_vibrant": {
-                "en": "vibrant?",
-                "it": "vibrant?",
-                "de": "vibrant?",
-                "fr": "vibrant?",
+                "en": "Vibrant?",
+                "it": "Vivace?",
+                "de": "Lebendig?",
+                "fr": "Stimulant?",
             },
             "scale_label_uneventful": {
-                "en": "uneventful?",
-                "it": "uneventful?",
-                "de": "uneventful?",
-                "fr": "uneventful?",
+                "en": "Uneventful?",
+                "it": "Statico?",
+                "de": "Ereignisarm?",
+                "fr": "Amorphe?",
             },
             "scale_label_calm": {
-                "en": "calm?",
-                "it": "calm?",
-                "de": "calm?",
-                "fr": "calm?",
+                "en": "Calm?",
+                "it": "Calmo?",
+                "de": "Ruhig?",
+                "fr": "Calme?",
             },
             "scale_label_annoying": {
-                "en": "annoying?",
-                "it": "annoying?",
-                "de": "annoying?",
-                "fr": "annoying?",
+                "en": "Annoying?",
+                "it": "Disturbante?",
+                "de": "Störend?",
+                "fr": "Gênant?",
             },
             "scale_label_eventful": {
-                "en": "eventful?",
-                "it": "eventful?",
-                "de": "eventful?",
-                "fr": "eventful?",
+                "en": "Eventful?",
+                "it": "Dinamico?",
+                "de": "Ereignisreich?",
+                "fr": "Animé?",
             },
             "scale_label_monotonus": {
-                "en": "monotonus?",
-                "it": "monotonus?",
-                "de": "monotonus?",
-                "fr": "monotonus?",
+                "en": "Monotonus?",
+                "it": "Monotono?",
+                "de": "Monoton?",
+                "fr": "Ennuyeux?",
             },
-            # Button text
+            # Button text (btw doesn't work)
             "submit_button": {
                 "en": "Submit",
                 "it": "Invia il questionario",
