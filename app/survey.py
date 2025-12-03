@@ -11,6 +11,7 @@ import soundfile as sf
 import shutil
 import db_functions as mydb
 import languages as lg
+from zoneinfo import ZoneInfo  
 
 
 
@@ -172,7 +173,7 @@ def main():
         #st.markdown(f"[share]({area})")
 
         #print("get url", area)
-
+        st.success(lg.languages["text"]["descriptions"]["feedback_thanks"][lang])
         st.write(f"**Sky:** {desc}")
         st.json(w)  # simply prints it
 
@@ -191,7 +192,7 @@ def main():
 
 
 
-        st.success("Thanks! Your responses have been recorded (not persisted here by default).")
+        
         st.write("### Your Responses:")
         st.write(f"**Traffic noise:** {traffic_noise}")
         st.write(f"**Other noise:** {other_noise}")
@@ -199,14 +200,14 @@ def main():
         st.write(f"**Natural sounds:** {natural_sounds}")
 
         st.write("### Perceptual scales")
-        st.write(f"pleasant: {pleasant}")
-        st.write(f"chaotic: {chaotic}")
-        st.write(f"vibrant: {vibrant}")
-        st.write(f"uneventful: {uneventful}")
-        st.write(f"calm: {calm}")
-        st.write(f"annoying: {annoying}")
-        st.write(f"eventful: {eventful}")
-        st.write(f"monotonus: {monotonus}")
+        st.write(f"{lg.languages["text"]["question_descriptions"]["scale_label_pleasant"][lang]}: {pleasant}")
+        st.write(f"{lg.languages["text"]["question_descriptions"]["scale_label_chaotic"][lang]}: {chaotic}")
+        st.write(f"{lg.languages["text"]["question_descriptions"]["scale_label_vibrant"][lang]}: {vibrant}")
+        st.write(f"{lg.languages["text"]["question_descriptions"]["scale_label_uneventful"][lang]}: {uneventful}")
+        st.write(f"{lg.languages["text"]["question_descriptions"]["scale_label_calm"][lang]}: {calm}")
+        st.write(f"{lg.languages["text"]["question_descriptions"]["scale_label_annoying"][lang]}: {annoying}")
+        st.write(f"{lg.languages["text"]["question_descriptions"]["scale_label_eventful"][lang]}: {eventful}")
+        st.write(f"{lg.languages["text"]["question_descriptions"]["scale_label_monotonus"][lang]}: {monotonus}")
 
         
 
@@ -221,13 +222,16 @@ def main():
         if audio_value:
             audiodata, samplerate = sf.read(io.BytesIO(audio_value.getbuffer()))
             st.audio(audio_value)
-            current_datetime = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+
+
+            tz = ZoneInfo("Europe/Vienna")
+            current_datetime = datetime.now(tz).strftime("%d-%m-%Y-%H-%M-%S")
             str_current_datetime = str(current_datetime)
 
             if area != None: 
-                audio_name = area+"_"+str_current_datetime+".wav"
+                audio_name = area+"-"+str_current_datetime+".wav"
             else:
-                audio_name = "noarea_"+str_current_datetime+".wav"
+                audio_name = "noarea-"+str_current_datetime+".wav"
 
             #audio_path = AUDIO_DIR / audio_name
             #sf.write(audio_name, audiodata, samplerate,format='ogg', subtype='vorbis')
@@ -244,6 +248,9 @@ def main():
                 #f.write(audio_value.getbuffer())
                 #st.write("Audio recorded and saved successfully! ", audio_name)
                 #f.close()
+
+
+
 
         mydb.write_table(
             traffic_noise, other_noise, human_noise, natural_sounds,
