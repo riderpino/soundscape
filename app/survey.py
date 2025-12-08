@@ -15,6 +15,8 @@ from zoneinfo import ZoneInfo
 
 
 
+st.session_state.is_submitted = False
+
 def main():
 
    
@@ -158,7 +160,7 @@ def main():
         )
         st.divider()
 
-        audio_value = st.audio_input(lg.languages["text"]["question_descriptions"]["q_audio_input"][lang], sample_rate=48000)
+        audio_value = st.audio_input(lg.languages["text"]["question_descriptions"]["q_audio_input"][lang], sample_rate=None)
 
         
 
@@ -168,14 +170,15 @@ def main():
         submitted = st.form_submit_button("Submit") 
 
 
-    if submitted: #add the only single submission
+    if submitted and not st.session_state.is_submitted: #add the only single submission
+        st.session_state.is_submitted = True
         #area = "luca"
         #st.markdown(f"[share]({area})")
 
         #print("get url", area)
         st.success(lg.languages["text"]["descriptions"]["feedback_thanks"][lang])
-        st.write(f"**Sky:** {desc}")
-        st.json(w)  # simply prints it
+        #st.write(f"**Sky:** {desc}")
+        #st.json(w)  # simply prints it
 
         orario = datetime.now()
         #st.write(f"time {orario}")
