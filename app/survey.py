@@ -210,8 +210,9 @@ def main():
         st.success(lg.languages["text"]["descriptions"]["feedback_thanks"][lang])
         #st.write(f"**Sky:** {desc}")
         #st.json(w)  # simply prints it
+        tz = ZoneInfo("Europe/Vienna")
 
-        orario = datetime.now()
+        orario = datetime.now(tz).strftime("%d-%m-%Y-%H-%M-%S")
         #st.write(f"time {orario}")
 
         
@@ -259,7 +260,8 @@ def main():
 
 
             tz = ZoneInfo("Europe/Vienna")
-            current_datetime = datetime.now(tz).strftime("%d-%m-%Y-%H-%M-%S")
+            
+            current_datetime = datetime.now(tz).strftime("%Y-%m-%d-%H-%M-%S")
             str_current_datetime = str(current_datetime)
 
             if area != None: 
