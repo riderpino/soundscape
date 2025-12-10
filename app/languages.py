@@ -138,7 +138,7 @@ languages = {
                 "fr": "Information de contact",
             },
             "q_comments_placeholder": {
-                "en": "Can you specify the device that you are using (e.g. brand, model)?",
+                "en": "Can you specify the mobile device that you are using (e.g. brand, model)?",
                 "it": "Puoi specificare il dispositivo che hai usato per rispondere a questo questionario (Marca e modello)",
                 "de": "Welches Gerät verwenden Sie (Smartphone, Tablet, Marke, Modell)?",
                 "fr": "Pouvez vous précisez l'appareil que vous utlisez (marque, modèle) ?",
