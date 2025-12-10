@@ -106,7 +106,7 @@ def main():
     if st.button("Show data protection declaration (English version)"):
             dataprotection.show_data_protection_dialog()
 
-    consent = st.radio("Do you agre with the Data Protection Declaration? (English version)",["Yes", "No"],  index=None)
+    consent = st.radio("Do you agree with the Data Protection Declaration? (English version)",["Yes", "No"],  index=None)
     if consent == "No" or consent == None: 
         st.session_state.is_submitted = True
 
