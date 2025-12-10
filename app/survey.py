@@ -12,17 +12,18 @@ import shutil
 import db_functions as mydb
 import languages as lg
 from zoneinfo import ZoneInfo  
+import dataprotection 
 
 
 
 st.session_state.is_submitted = False
+#st.session_state.language = "en"
 
 def main():
 
-   
-    #supported_languages = ["en", "nl", "it"]
-    #lang = request.accept_languages.best_match(supported_languages)
-    language = st.selectbox("Choose your language:",("English", "Italiano", "Deutsch", "Français"),)
+    st.title(lg.languages["text"]["titles"]["app_title"]["en"])
+
+    language = st.selectbox("🇬🇧 Choose your language | 🇩🇪 Wähle deine Sprache | 🇮🇹 Scegli la tua lingua | 🇫🇷 Choisissez votre langue",("English","Deutsch", "Italiano",  "Français"),)
     
 
     if language == "English": 
@@ -33,6 +34,11 @@ def main():
         lang = "de"
     elif language ==  "Français": 
         lang = "fr"
+
+    st.write(lg.languages["text"]["descriptions"]["study_description"][lang])
+    #supported_languages = ["en", "nl", "it"]
+    #lang = request.accept_languages.best_match(supported_languages)
+    
 
     #st.write(lang)
     
@@ -49,9 +55,7 @@ def main():
     #area = st.query_params
     mydb.init_table()
 
-    st.title(lg.languages["text"]["titles"]["app_title"][lang])
-
-    st.write(lg.languages["text"]["descriptions"]["study_description"][lang])
+    
 
     # Define the options
     noise_levels = lg.languages["text"]["groups_of_scales"]["noise_levels"][lang]
@@ -85,11 +89,37 @@ def main():
     except Exception as e:
         st.error(f"Weather unavailable: {e}")
 
+    ## data protection here
 
 
+    st.write(
+                """ Privacy policy (English version)
+
+            \n - The server resides in the University of Vienna.  
+            \n - The audio recording will be used for laboratory studies.  
+            \n - All the data will be deleted by 31st of December 2027.  
+            \n - Contact informations: penguel00[at]univie.ac.at
+                """
+            )
+    
     #with st.expander("📝 Noise Perception Questions"):
+    if st.button("Show data protection declaration (English version)"):
+            dataprotection.show_data_protection_dialog()
+
+    consent = st.radio("Do you agre with the Data Protection Declaration? (English version)",["Yes", "No"],  index=None)
+    if consent == "No" or consent == None: 
+        st.session_state.is_submitted = True
+
     with st.form("soundscape_form"):
         
+        
+        
+        #st.html("<p>Open a PDF file <a href='/dpd.pdf'>example</a>.</p>")
+        #st.link_button("📄 Open privacy policy (PDF)", "dpd.pdf")
+        
+
+        
+
 
         st.caption(lg.languages["text"]["titles"]["section_hear_types"][lang])
         
@@ -166,7 +196,8 @@ def main():
 
         comments = st.text_area(lg.languages["text"]["question_descriptions"]["q_optional_comment"][lang], placeholder=lg.languages["text"]["question_descriptions"]["q_comments_placeholder"][lang])
         contacts = st.text_area(lg.languages["text"]["question_descriptions"]["q_contact_information"][lang], placeholder=lg.languages["text"]["question_descriptions"]["q_contacts_placeholder"][lang])
-        
+        if consent == "No" or consent == None: 
+            st.error("You need to agree with the Data Protection Declaration to submit the form")
         submitted = st.form_submit_button("Submit") 
 
 
