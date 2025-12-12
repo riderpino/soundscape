@@ -1,3 +1,9 @@
+
+
+
+
+
+
 languages = {
     "text": {
         ####
@@ -91,7 +97,7 @@ languages = {
             },
             "q_natural_sounds": {
                 "en": "Natural sounds (e.g, singing birds, flowing water, wind in vegetation)",
-                "it": "suoni naturali (e.g, uccelli, acqua corrente e cascate, vento, pioggia)",
+                "it": "suoni naturali (e.g, uccelli, acqua corrente e cascate, vento)",
                 "de": "Naturgeräusche (z.B. Vogelgesang, fließendes Wasser, Wind in den Bäumen und Pflanzen)",
                 "fr": "Sons naturels (e.g, oiseaux, eau qui coule, vent)",
             },
@@ -337,11 +343,80 @@ languages = {
                 ],
             },
             "yes_no": {
-                "en": ["Yes", "No"],
+
+                "en": ["Yes","No"],
                 "it": ["Si", "No"],
                 "de": ["Ja", "Nein"],
                 "fr": ["Oui", "Non"],
             },
         },
-    }
+        "dataprotection":{
+            "short_description":{
+                "en":
+                """ Privacy policy 
+
+            \n - The server resides in the University of Vienna.  
+            \n - The audio recording will be used for laboratory studies.  
+            \n - All the data will be deleted by 31st of December 2027.  
+            \n - Contact informations: penguel00[at]univie.ac.at
+                """,
+
+                "it":
+                """ Politica di protezione dei dati
+
+            \n - Il server risiede all'interno dell' Università di Vienna.  
+            \n - Le registrazioni audio saranno usate per studi di laboratorio.  
+            \n - Tutti i dati verranno eliminati entro il 31 dicembre 2027.  
+            \n - Informazioni di contatto: penguel00[at]univie.ac.at
+                """,
+
+                "de":
+                """ Privacy policy (English version)
+
+            \n - Der Server befindet sich an der Universität Wien.  
+            \n - Die Audioaufnahme wird für Laborstudien verwendet.  
+            \n - Alle Daten werden bis zum 31. Dezember 2027 gelöscht.  
+            \n - Kontaktinformationen: penguel00[at]univie.ac.at
+                """,
+
+                "fr":
+                """ Privacy policy 
+
+            \n - Le serveur est hébergé à l’Université de Vienne.  
+            \n - L’enregistrement audio sera utilisé pour des études en laboratoire.  
+            \n - Toutes les données seront supprimées au plus tard le 31 décembre 2027.  
+            \n - Informations de contact : penguel00[at]univie.ac.at
+                """,
+
+            },
+
+            "dataprotection_button":{
+                "en":"Show data protection declaration ",
+                "it":"Mostra la dichiarazione di protezione dei dati",
+                "de":"Datenschutzerklärung anzeigen",
+                "fr":"Afficher la déclaration de protection des données",
+            },
+
+            "do_you_agree_dataprot":{
+                "en":"Do you agree with the Data Protection Declaration?",
+                "it":"Acconsenti alla dichiarazione sulla protezione dei dati?",
+                "de":"Sind Sie mit der Datenschutzerklärung einverstanden?",
+                "fr":"Êtes-vous d’accord avec la déclaration de protection des données ?",
+
+            },
+            "you_need_to":{
+                "en":"You need to agree with the Data Protection Declaration to submit the form",
+                "it":"Devi acconsentire alla dichiarazione sulla protezione dei dati per proseguire",
+                "de":"Sie müssen der Datenschutzerklärung zustimmen, um das Formular abzusenden.",
+                "fr":"Vous devez accepter la déclaration de protection des données pour soumettre le formulaire.",
+
+
+            }
+
+
+
+
+
+        },
+    },
 }

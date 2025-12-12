@@ -20,10 +20,19 @@ st.session_state.is_submitted = False
 #st.session_state.language = "en"
 
 def main():
+   
+
+    
+    st.set_page_config(
+    page_title="Soundscape",
+    page_icon= ":mountain:",
+    layout=None,
+    initial_sidebar_state="auto")
+    st.set_option("client.toolbarMode", "viewer")
 
     st.title(lg.languages["text"]["titles"]["app_title"]["en"])
 
-    language = st.selectbox("🇬🇧 Choose your language | 🇩🇪 Wähle deine Sprache | 🇮🇹 Scegli la tua lingua | 🇫🇷 Choisissez votre langue",("English","Deutsch", "Italiano",  "Français"),)
+    language = st.selectbox("Choose your language | Wähle deine Sprache |  Scegli la tua lingua | Choisissez votre langue",("English","Deutsch", "Italiano",  "Français"),)
     
 
     if language == "English": 
@@ -92,23 +101,40 @@ def main():
     ## data protection here
 
 
-    st.write(
-                """ Privacy policy (English version)
+    st.write(lg.languages["text"]["dataprotection"]["short_description"][lang])
+    
 
-            \n - The server resides in the University of Vienna.  
-            \n - The audio recording will be used for laboratory studies.  
-            \n - All the data will be deleted by 31st of December 2027.  
-            \n - Contact informations: penguel00[at]univie.ac.at
-                """
-            )
+    ###data protection declaration here!! 
     
     #with st.expander("📝 Noise Perception Questions"):
-    if st.button("Show data protection declaration (English version)"):
-            dataprotection.show_data_protection_dialog()
+    
+    if st.button(lg.languages["text"]["dataprotection"]["dataprotection_button"][lang]):
+            dataprotection.show_data_protection_dialog(lang)
 
-    consent = st.radio("Do you agree with the Data Protection Declaration? (English version)",["Yes", "No"],  index=None)
-    if consent == "No" or consent == None: 
+    #https://github.com/streamlit/streamlit/issues/1076   
+
+    #     
+
+    #this way it's how to get the index, it's easier to work with number
+
+    consent = st.radio(lg.languages["text"]["dataprotection"]["do_you_agree_dataprot"][lang],range(len(lg.languages["text"]["groups_of_scales"]["yes_no"][lang])), format_func=lambda x: lg.languages["text"]["groups_of_scales"]["yes_no"][lang][x],index=None)
+    
+
+    #print(consent)
+        
+    
+    if consent != 0 or consent == None: 
         st.session_state.is_submitted = True
+
+
+
+
+
+
+
+
+
+
 
     with st.form("soundscape_form"):
         
@@ -196,8 +222,8 @@ def main():
 
         comments = st.text_area(lg.languages["text"]["question_descriptions"]["q_optional_comment"][lang], placeholder=lg.languages["text"]["question_descriptions"]["q_comments_placeholder"][lang])
         contacts = st.text_area(lg.languages["text"]["question_descriptions"]["q_contact_information"][lang], placeholder=lg.languages["text"]["question_descriptions"]["q_contacts_placeholder"][lang])
-        if consent == "No" or consent == None: 
-            st.error("You need to agree with the Data Protection Declaration to submit the form")
+        if consent != 0 or consent == None: 
+            st.error(lg.languages["text"]["dataprotection"]["you_need_to"][lang])
         submitted = st.form_submit_button("Submit") 
 
 
