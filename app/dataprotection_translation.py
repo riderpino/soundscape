@@ -28,8 +28,8 @@ dataprotection_translations = {
 
                 - Anonymous survey responses
                 - Anonymous audio recordings without identifying information
-                - Contact informations are collected on voluntary bases
-                - Clients Ip addresses are stored on the server for operational purposes
+                - Contact informations, if supplied voluntarily
+                - Client IP addresses are stored on the server for operational purposes
 
                 Legal foundation(s) of the processing activity:
                 - Explicit consent of the data subject (Art. 6(1)(a) GDPR)
@@ -44,7 +44,7 @@ dataprotection_translations = {
                 The University of Vienna will store your personal data for the following duration:
                 - Anonymous survey responses: until 31 December 2027
                 - Anonymous audio recordings: until 31 December 2027
-                - Personal identifiers (contact information) is stored if given voluntarily
+                - Personal identifiers (contact information), if given voluntarily: until 31 December 2027, earlier removal on request
 
                 Vienna, 10 December 2025
                     """,
