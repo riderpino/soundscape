@@ -106,50 +106,49 @@ dataprotection_translations = {
  
 
     "de": """
-                Data Protection Declaration  
-                Anonymous research survey  
+                Datenschutzerklärung 
+                Anonyme Umfrage für Forschungszwecke
 
-                Lorenzo Pengue is the controller, i.e. the entity responsible for this processing activity,  
-                in accordance with the General Data Protection Regulation (GDPR). According to the GDPR, the  
-                controller is obliged to provide information to data subjects. Therefore, please take note of the  
-                following information:
+                Lorenzo Pengue ist der Verantwortliche für die Datenverarbeitung gemäß Datenschutz-Grundverordnung
+                (DSGVO) und ist demgemäß verpflichtet, den betroffenen Personen folgende Informationen zur
+                Verfügung zu stellen. Bitte beachten Sie:
 
-                This processing activity is carried out for the following purposes:
+                Die Datenverarbeitung wird für folgende Zwecke durchgeführt:
 
-                - anonymous research survey
-                - analysis of anonymous survey responses
-                - analysis of short audio recordings for laboratory studies
-                - scientific evaluation of sound perception  
+                - anonyme Umfrage für Forschungszwecke
+                - Analyse der anonymen Antworten
+                - Analyse der anonyme Audio-Aufzeichnungen im Rahmen von späteren Laborstudien
+                - wissenschaftliche Auswertung der Klangwahrnehmung
 
                 Lorenzo Pengue  
                 penguel00@univie.ac.at  
 
-                Contact person: Lorenzo Pengue  
-                is the controller responsible for this processing activity.
+                Kontaktperson: Lorenzo Pengue  
+                als Verantwortlicher für die Datenverarbeitung.
 
 
-                For the purpose of this processing activity, the University of Vienna processes the  
-                following categories of personal data:
+                Die Universität Wien verarbeitet für diese Datenverarbeitung folgende Kategorien von Daten:
 
-                - Anonymous survey responses
-                - Anonymous audio recordings without identifying information
-                - Contact informations are collected on voluntary bases
-                - Clients Ip addresses are stored on the server for operational purposes
+                - Anonyme Umfrage-Antworten
+                - Anonyme Audio-Aufzeichnungen ohne identifzierende Informationen
+                - Kontaktdaten der Teilnehmer*in, falls freiwillig zur Verfügung gestellt
+                - Client-IP-Adressen für den Serverbetrieb
 
-                Legal foundation(s) of the processing activity:
-                - Explicit consent of the data subject (Art. 6(1)(a) GDPR)
-                - Austrian Reseach Organisation law (Forschungsorganisationsgesetz)
+                Rechtliche Grundlagen für die Datenverarbeitung:
+                - Ausdrückliche Einwilligung der Teilnehmer*innen (Art. 6(1)(a) DSGVO)
+                - Forschungsorganisationsgesetz
 
-                Data protection declaration Anonymous research survey, version 1.0 as of 10 December 2025  
+                Datenschutzerklärung – anonyme Umfrage für Forschungszwecke, Version 1.0 vom 10. Dezember 2025  
 
-                If you provided contact information voluntarily, we will remove from the dataset upon your request.  
-                No personal data will be disclosed to recipients outside the University of Vienna.  
-                No personal data will be transferred to recipients in a third country (EU or EEA country) or an international organization.  
+                Falls Sie uns freiwillig Ihre Kontaktdaten zur Verfügung stellen, löschen wir diese auf Ihre
+                Aufforderung hin aus dem Datensatz.
+                Keine persönlichen Daten werden Dritten außerhalb der Universität Wien mitgeteilt.
+                Keine persönlichen Daten werden an Empfänger*innen in anderen Staaten oder an internationale Organisationen mitgeteilt.
 
-                The University of Vienna will store your personal data for the following duration:
-                - Anonymous survey responses: until 31 December 2027
-                - Anonymous audio recordings: until 31 December 2027
-                - Personal identifiers (contact information) is stored if given voluntarily
+                Die Universität Wien speichert die erhobenen Daten für folgende Zeiträume:
+                - Anonyme Umfrage-Antworten: bis 31. Dezember 2027
+                - Anonyme Audio-Aufzeichnungen: bis 31. Dezember 2027
+                - Kontaktdaten der Teilnehmer*in, falls freiwillig zur Verfügung gestellt: bis 31. Dezember 2027, frühere Löschung auf Aufforderung 
 
                 Vienna, 10 December 2025
                     """, 
