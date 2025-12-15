@@ -81,10 +81,10 @@ dataprotection_translations = {
                 Ai fini di questa attività di trattamento dei dati, l’Università di Vienna tratta le  
                 seguenti categorie di dati personali:
 
-                - risposte anonime al questionario
-                - registrazioni audio anonime prive di informazioni identificative
-                - le informazioni di contatto sono raccolte su base volontaria
-                - gli indirizzi IP dei clienti sono memorizzati sul server per finalità operative
+                - Risposte anonime al questionario
+                - Registrazioni audio anonime prive di informazioni identificative
+                - Informazioni di contatto, se fornite su base volontaria
+                - Gli indirizzi IP degli utenti sono memorizzati sul server per finalità operative
 
                 Base/i giuridica/che dell’attività di trattamento dei dati:
                 - consenso esplicito dell’interessato (art. 6(1)(a) GDPR)
@@ -97,9 +97,9 @@ dataprotection_translations = {
                 Nessun dato personale sarà trasferito a destinatari in un paese terzo (al di fuori dell’UE o del SEE) o a un’organizzazione internazionale.  
 
                 L’Università di Vienna conserverà i vostri dati personali per la seguente durata:
-                - risposte anonime al questionario: fino al 31 dicembre 2027
-                - registrazioni audio anonime: fino al 31 dicembre 2027
-                - gli identificatori personali (informazioni di contatto) sono conservati se forniti volontariamente
+                - Risposte anonime al questionario: fino al 31 dicembre 2027
+                - Registrazioni audio anonime: fino al 31 dicembre 2027
+                - Identificatori personali (informazioni di contatto), se forniti volontariamente: fino al 31 dicembre 2027, rimozione anticipata su richiesta
 
                 Vienna, 10 dicembre 2025
                     """,
@@ -164,10 +164,10 @@ dataprotection_translations = {
 
                 Cette activité de traitement des données est réalisée aux fins suivantes :
 
-                - enquête de recherche anonyme
-                - analyse des réponses anonymes à l’enquête
-                - analyse de courts enregistrements audio pour des études en laboratoire
-                - évaluation scientifique de la perception sonore  
+                - Enquête de recherche anonyme
+                - Analyse des réponses anonymes à l’enquête
+                - Analyse de courts enregistrements audio pour des études en laboratoire
+                - Évaluation scientifique de la perception sonore  
 
                 Lorenzo Pengue  
                 penguel00@univie.ac.at  
@@ -179,14 +179,14 @@ dataprotection_translations = {
                 Aux fins de cette activité de traitement des données, l’Université de Vienne traite les  
                 catégories de données personnelles suivantes :
 
-                - réponses anonymes à l’enquête
-                - enregistrements audio anonymes sans informations identifiantes
-                - les informations de contact sont collectées sur une base volontaire
+                - Réponses anonymes à l’enquête
+                - Enregistrements audio anonymes sans informations identifiantes
+                - Informations de contact, si elles sont fournies volontairement
                 - les adresses IP des clients sont stockées sur le serveur à des fins opérationnelles
 
                 Base(s) juridique(s) de l’activité de traitement des données :
-                - consentement explicite de la personne concernée (art. 6(1)(a) RGPD)
-                - loi autrichienne sur les organisations de recherche (Forschungsorganisationsgesetz)
+                - Consentement explicite de la personne concernée (art. 6(1)(a) RGPD)
+                - Loi autrichienne sur les organisations de recherche (Forschungsorganisationsgesetz)
 
                 Déclaration de protection des données – enquête de recherche anonyme, version 1.0 du 10 décembre 2025  
 
@@ -197,7 +197,7 @@ dataprotection_translations = {
                 L’Université de Vienne conservera vos données personnelles pour la durée suivante :
                 - réponses anonymes à l’enquête : jusqu’au 31 décembre 2027
                 - enregistrements audio anonymes : jusqu’au 31 décembre 2027
-                - les identifiants personnels (informations de contact) sont conservés s’ils sont fournis volontairement
+                - Données personnelles (coordonnées), si elles sont fournies volontairement : conservées jusqu’au 31 décembre 2027, suppression anticipée sur demande.
 
                 Vienne, 10 décembre 2025
                     """,
