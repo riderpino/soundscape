@@ -23,8 +23,8 @@ languages = {
                 "fr": "Actuellement, dans quelle mesure entendez-vous ces quatres catégories de son ?",
             },
             "section_8_scales": {
-                "en": "for each of the 8 scales below, to what extend do you agree or disagree that the present surrunding sound enviroment is...",
-                "it": "Per ognuna delle seguenti otto scale, in quale misura sei d'accordo o non sei d'accordo che il souno dell'ambiente intorno a te è..",
+                "en": "for each of the 8 scales below, to what extent do you agree or disagree that the present surrounding sound environment is...",
+                "it": "Per ognuna delle seguenti otto scale, in quale misura sei d'accordo o non sei d'accordo che il suono dell'ambiente intorno a te è..",
                 "de": "Bitte beurteilen Sie mit den Schiebereglern: Halten Sie die momentane akustische Umgebung für ... ?",
                 "fr": "Pour chaque point ci-dessous, dans quelle mesure êtes-vous en accord ou en désaccord avec le fait que l'environnement sonore soit...",
             },
@@ -47,7 +47,7 @@ languages = {
                 "fr": "Commentaires",
             },
             "section_contact_informations": {
-                "en": "Contact informations",
+                "en": "Contact information",
                 "it": "informazioni di contatto",
                 "de": "Kontaktdaten",
                 "fr": "Contacts",
@@ -59,7 +59,7 @@ languages = {
         "descriptions": {
             "study_description": {
                 "en": "This study aims to understand the soundscape around us. I ask you to answer the survey based on your personal perception of the sound around you in this moment",
-                "it": "Questo studio si impegna nella creazione di un applicativo per l’analisi del panorma sonoro. Ti chiedo ti rispondere al questionario basandoti sulla tua personale percezione del suono intorno a te in questo momento e in questo luogo",
+                "it": "Questo studio si impegna nella creazione di un applicativo per l’analisi del panorama sonoro. Ti chiedo di rispondere al questionario basandoti sulla tua personale percezione del suono intorno a te in questo momento e in questo luogo",
                 "de": "Das Ziel dieser Studie ist das Erforschen der akustischen Umgebung. Wir bitten Sie, die Fragen so zu beantworten, wie es Ihrer persönlichen Wahrnehmung der momentanen Geräuschkulisse entspricht.",
                 "fr": "Cette étude a pour but de comprendre l'environnement sonore qui nous entoure. Je vous demande de répondre à cette étude en vous basant sur votre perception des sons autours de vous à cet instant.",
             },
@@ -97,24 +97,24 @@ languages = {
             },
             "q_natural_sounds": {
                 "en": "Natural sounds (e.g, singing birds, flowing water, wind in vegetation)",
-                "it": "suoni naturali (e.g, uccelli, acqua corrente e cascate, vento)",
+                "it": "Suoni naturali (e.g, uccelli, acqua corrente e cascate, vento)",
                 "de": "Naturgeräusche (z.B. Vogelgesang, fließendes Wasser, Wind in den Bäumen und Pflanzen)",
                 "fr": "Sons naturels (e.g, oiseaux, eau qui coule, vent)",
             },
             "q_overall_environment": {
-                "en": "Overall, how would you describe the present enviroment?",
-                "it": "Come descriversti l'ambiente circostante in generale ?",
+                "en": "Overall, how would you describe the present environment?",
+                "it": "Come descriversti l'ambiente circostante in generale?",
                 "de": "Wie würden Sie die Geräuschkulisse insgesamt beschreiben?",
                 "fr": "Globalement, comment décririez-vous l'environnement actuel ?",
             },
             "q_appropriate_sound_environment": {
-                "en": "Overall, to what extent is the present surrounding sound enviroment appropriate to the present place?",
-                "it": "in generale, quanto i suoni dell'ambiente intorno a te sono appropriati al luogo in cui ti trovi?",
+                "en": "Overall, to what extent is the present surrounding sound environment appropriate to the present place?",
+                "it": "In generale, quanto i suoni dell'ambiente intorno a te sono appropriati al luogo in cui ti trovi?",
                 "de": "Wie typisch ist die momentane Geräuschkulisse für diesen Ort?",
                 "fr": "Globalement, dans quelle mesure l'environnement sonore vous semble-t-il approprié à la localisation ?",
             },
             "q_were_you_wearing_headphones": {
-                "en": "Were you wearing heaphones during this survey?",
+                "en": "Were you wearing headphones during this survey?",
                 "it": "Indossavi cuffie o auricolari durante questo questionario?",
                 "de": "Haben Sie Kopfhörer getragen, während Sie den Fragebogen ausgefüllt haben?",
                 "fr": "Portiez-vous des écouteurs pendant ce questionnaire ?",
@@ -139,7 +139,7 @@ languages = {
             },
             "q_contact_information": {
                 "en": "Contact information",
-                "it": "Infomazioni di contatto",
+                "it": "Informazioni di contatto",
                 "de": "Kontaktdaten",
                 "fr": "Information de contact",
             },
@@ -150,7 +150,7 @@ languages = {
                 "fr": "Pouvez vous précisez l'appareil que vous utlisez (marque, modèle) ?",
             },
             "q_contacts_placeholder": {
-                "en": "If you are interested about the future of this project leave us a contact",
+                "en": "If you are interested in the future of this project, leave us your contact information",
                 "it": "Se sei interessato al futuro di questo progetto lasciaci un contatto",
                 "de": "Wenn Sie über die weiteren Entwicklungen dieses Projektes informiert werden wollen, geben Sie uns bitte Ihre Kontaktdaten bekannt.",
                 "fr": "Si les résultats de cette étude vous intéresse, donnez-nous une façon de vous contacter.",
@@ -204,7 +204,7 @@ languages = {
                 "fr": "Animé?",
             },
             "scale_label_monotonus": {
-                "en": "Monotonus?",
+                "en": "Monotonous?",
                 "it": "Monotono?",
                 "de": "Monoton?",
                 "fr": "Ennuyeux?",
@@ -234,7 +234,7 @@ languages = {
                     "Per niente",
                     "Un po'",
                     "Moderatamente",
-                    "molto",
+                    "Molto",
                     "Domina completamente",
                 ],
                 "de": [
@@ -256,16 +256,16 @@ languages = {
                 "en": [
                     "Strongly Agree",
                     "Agree",
-                    "Neither agree, nor disagree",
-                    "disagree",
+                    "Neither agree nor disagree",
+                    "Disagree",
                     "Strongly disagree",
                 ],
                 "it": [
                     "Pienamente d'accordo",
                     "D'accordo",
                     "Né d'accordo né in disaccordo",
-                    "Disaccordo",
-                    "Fortemente disaccordo",
+                    "In disaccordo",
+                    "Fortemente in disaccordo",
                 ],
                 "de": [
                     "Starke Zustimmung",
@@ -291,11 +291,11 @@ languages = {
                     "Very bad",
                 ],
                 "it": [
-                    "Molto bene",
-                    "Bene",
+                    "Molto buono",
+                    "buono",
                     "Né bene né male",
-                    "Male",
-                    "Molto male",
+                    "negativo",
+                    "Molto negativo",
                 ],
                 "de": [
                     "sehr gut",
@@ -322,7 +322,7 @@ languages = {
                 ],
                 "it": [
                     "Per niente",
-                    "leggermente",
+                    "Leggermente",
                     "Moderatamente",
                     "Molto",
                     "Perfettamente",
@@ -345,7 +345,7 @@ languages = {
             "yes_no": {
 
                 "en": ["Yes","No"],
-                "it": ["Si", "No"],
+                "it": ["Sì", "No"],
                 "de": ["Ja", "Nein"],
                 "fr": ["Oui", "Non"],
             },
@@ -358,7 +358,7 @@ languages = {
             \n - The server resides in the University of Vienna.  
             \n - The audio recording will be used for laboratory studies.  
             \n - All the data will be deleted by 31st of December 2027.  
-            \n - Contact informations: penguel00[at]univie.ac.at
+            \n - Contact information: penguel00[at]univie.ac.at
                 """,
 
                 "it":
