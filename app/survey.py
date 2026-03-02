@@ -14,7 +14,12 @@ import languages as lg
 from zoneinfo import ZoneInfo  
 import dataprotection 
 
+import recorder_new
+import base64
 
+
+
+_RELEASE = True
 
 st.session_state.is_submitted = False
 #st.session_state.language = "en"
@@ -62,7 +67,10 @@ def main():
     print("url", area)
 
     #area = st.query_params
-    mydb.init_table()
+
+    #inizialisation of the database table! It's very important
+    if _RELEASE:
+        mydb.init_table()
 
     
 
@@ -216,7 +224,8 @@ def main():
         )
         st.divider()
 
-        audio_value = st.audio_input(lg.languages["text"]["question_descriptions"]["q_audio_input"][lang], sample_rate=None)
+        #audio_value = st.audio_input(lg.languages["text"]["question_descriptions"]["q_audio_input"][lang], sample_rate=None)
+        audio_value = recorder_new.recorder_new(text_on_the_component = lg.languages["text"]["question_descriptions"]["q_audio_input"][lang],max_recording_time = 32)
 
         
 
@@ -281,8 +290,14 @@ def main():
 
         audio_name = "noaudio"
         if audio_value:
-            audiodata, samplerate = sf.read(io.BytesIO(audio_value.getbuffer()))
-            st.audio(audio_value)
+
+            wav_bytes = base64.b64decode(audio_value["wav_base64"])
+
+            audiodata, samplerate = sf.read(io.BytesIO(wav_bytes))
+            st.audio(audiodata, sample_rate=samplerate)
+            if not _RELEASE: 
+                st.write("the samplerate is, after the reading from wav_bytes ", samplerate)
+                st.audio(wav_bytes, format="audio/wav")
 
 
             tz = ZoneInfo("Europe/Vienna")
@@ -297,14 +312,15 @@ def main():
 
             #audio_path = AUDIO_DIR / audio_name
             #sf.write(audio_name, audiodata, samplerate,format='ogg', subtype='vorbis')
-            sf.write(audio_name, audiodata, samplerate,format='wav')
+            if _RELEASE:
+                sf.write(audio_name, audiodata, samplerate,format='wav')
             #backup audio file
 
-            BACKUP_DIR = os.getenv("BACKUP_DIR", "/backup")
+                BACKUP_DIR = os.getenv("BACKUP_DIR", "/backup")
 
-            backup_name = os.path.join(BACKUP_DIR, audio_name)
+                backup_name = os.path.join(BACKUP_DIR, audio_name)
             #backup_name = "/Users/lorenzo/codes/soundscape_data/" + audio_name
-            shutil.copy(audio_name, backup_name )
+                shutil.copy(audio_name, backup_name )
             st.write("Audio recorded and saved successfully! ", audio_name)
             #with open(audio_name, "wb") as f:
                 #f.write(audio_value.getbuffer())
@@ -313,17 +329,20 @@ def main():
 
 
 
-
-        mydb.write_table(
-            traffic_noise, other_noise, human_noise, natural_sounds,
-            pleasant, chaotic, vibrant, uneventful,
-            calm, annoying, eventful, monotonus,
-            howstheplace, appropriate,
-            audio_name, comments, wereyouwearing, usuallywear,
-            orario,  precip_mm, temp_c, wcode,
-            wind_kmh, gust_kmh, wind_dir_deg, contacts, area, lang)
+        if _RELEASE:
+            mydb.write_table(
+                traffic_noise, other_noise, human_noise, natural_sounds,
+                pleasant, chaotic, vibrant, uneventful,
+                calm, annoying, eventful, monotonus,
+                howstheplace, appropriate,
+                audio_name, comments, wereyouwearing, usuallywear,
+                orario,  precip_mm, temp_c, wcode,
+                wind_kmh, gust_kmh, wind_dir_deg, contacts, area, lang)
         
-        mydb.database_backup()
+        if _RELEASE:
+            mydb.database_backup()
+        
+     
 
             
     

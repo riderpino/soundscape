@@ -8,7 +8,10 @@ COPY ./requirements.txt /code/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
+
 COPY ./app /code/app
+
+RUN pip install /code/app/custom_component/streamlit_recorder_new-0.0.2-py3-none-any.whl
 
 RUN mkdir -p /backup
 
