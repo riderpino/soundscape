@@ -1,4 +1,7 @@
 # soundscape
+Architecture: 
+
+![UML class diagram](UML_thesis.png?raw=true "UML class diagram")
 
 Building with docker: 
 
